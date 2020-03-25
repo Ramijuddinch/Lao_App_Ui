@@ -1,0 +1,30 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>otp</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content padding>
+    <form #OTP="ngForm">
+  <h4 class="ver">Verification</h4>
+  <ion-row>
+    <ion-col col-12>
+      <img class="logo" src='assets/imgs/icon.png'>
+    </ion-col>
+  </ion-row>
+  <h1 class="otpText">OTP has been sent to your mobile number </h1>
+  <p class="mobile">+91{{signInModel.mobileNo}}</p>
+  <ion-list class="items-middle" text-center>
+    <ion-item no-lines class="otpcontainer">
+      <ion-input autofocus no-margin class="otpInput "  type="tel" name="inputopt1" #inputopt1="ngModel"
+        [(ngModel)]="otp" maxlength="4" minlength="4" (keyup.enter)="verifyOtp(otp)" oninput="this.value?this.value=this.value.replace(/(?![0-9])./gmi,''):''" required></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-row style="margin-top: 20%">
+    <ion-col>
+      <button ion-button round class="smallbutton"  [disabled]="OTP.invalid" (click)="Verify(otp)">Verify</button>
+    </ion-col>
+  </ion-row>
+  </form>
+</ion-content>

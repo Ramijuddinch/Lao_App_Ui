@@ -1,0 +1,23 @@
+page-registration {
+    .keepMe{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        color: #888;
+        padding-left: -25px;
+        margin-left: 2px;
+        width: 150px;
+        }
+        .checkBox{
+            position: static;
+            display: block;
+            margin: 9px 10px 9px 4px;
+            background-color: transparent;
+        }
+        .warning {
+            color: #ED1C24;
+            font-size: 13px;
+            font-weight: 700;
+            text-align: left;
+            margin-left: 4px;
+        }
+}

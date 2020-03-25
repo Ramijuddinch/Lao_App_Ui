@@ -1,0 +1,29 @@
+page-signup {
+    .logo{
+        display: block;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 43%;
+    }
+    
+    ion-input {
+        border: 5px !important;
+      }
+      
+      .text-input-ios, .text-input-md {
+          border-radius: 5px;
+          border: 1px solid #053f0f;
+      }
+      
+      .text-input {
+        margin-left: 5%;
+        margin-right:  0%;;
+          width: calc(100% - 10%);
+          padding: 13px 8px;
+      }
+    
+      .p-l-4{
+          margin-top: 15%;
+      }
+}

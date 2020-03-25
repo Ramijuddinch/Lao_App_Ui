@@ -1,0 +1,136 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Registration</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <form #registration="ngForm">
+    <ion-list class="loginForm">
+      <ion-item>
+        <ion-label floating color='dark'>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="registrationModel.retailerName" #retailername="ngModel" name="retailername"
+          required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating color='dark'>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="registrationModel.password" #Password="ngModel" name="Password" required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating color='dark'> Confirm password</ion-label>
+        <ion-input type="password" name="Conpassword" #Conpassword="ngModel" [(ngModel)]="registrationModel.conpassword"
+          required></ion-input>
+      </ion-item>
+
+ 
+      <ion-item>
+        <ion-label floating color='dark'>Contact Number</ion-label>
+        <ion-input type="tel" pattern="[5-9]{1}[0-9]{9}" minlength="10" maxlength="10"
+          oninput="this.value?this.value=this.value.replace(/(?![0-9])./gmi,''):''" required [(ngModel)]="mobile"
+          #ContactNumber="ngModel" name="ContactNumber"></ion-input>
+      </ion-item>
+
+    <ion-item>
+      <ion-label floating color='dark'>Outlet Name</ion-label>
+      <ion-input type="text" [(ngModel)]="registrationModel.outletName" #OutletName="ngModel" name="OutletName"
+        required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating color='dark'>Shop Address</ion-label>
+      <ion-input type="text" [(ngModel)]="registrationModel.shopAddress" #ShopAddress="ngModel" name="ShopAddress"
+        required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating color='dark'>City</ion-label>
+      <ion-input text-capitalize type="text" [(ngModel)]="registrationModel.city" #City="ngModel" name="City"
+        required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating color='dark'>State</ion-label>
+      <ion-input text-capitalize type="text" [(ngModel)]="registrationModel.state" #State="ngModel" name="State"
+        required></ion-input>
+    </ion-item>
+
+    <!-- <ion-item>
+      <ion-label floating color='dark'>Contact Number</ion-label>
+      <ion-input type="tel" pattern="[5-9]{1}[0-9]{9}" minlength="10" maxlength="10"
+        oninput="this.value?this.value=this.value.replace(/(?![0-9])./gmi,''):''" required [(ngModel)]="mobile"
+        #ContactNumber="ngModel" name="ContactNumber"></ion-input>
+    </ion-item> -->
+    <!-- [(ngModel)]="registrationModel.mobile"  minlength="10" type="tel"   name="ContactNumber" maxlength="10"  #ContactNumber="ngModel"  pattern="[5-9]{1}[0-9]{9}"  oninput="this.value?this.value=this.value.replace(/(?![0-9])./gmi,''):''" required -->
+    <!-- <div class="warning" *ngIf="ContactNumber.errors?.required && ContactNumber.touched">*{{'Contact Number is required'}}</div>
+                <div class="warning" *ngIf="ContactNumber.errors?.minlength">*{{'Contact Number  should be 10 digits long'}}</div>
+                <div class="warning" *ngIf="ContactNumber.errors?.pattern">*{{'Please enter valid contact number'}}</div> -->
+
+    <ion-item>
+      <ion-label floating color='dark'>Pin code</ion-label>
+      <ion-input type="tel" [(ngModel)]="registrationModel.zipcode" #Zipcode="ngModel" name="Zipcode" minlength="6"
+        maxlength="6" oninput="this.value?this.value=this.value.replace(/(?![0-9])./gmi,''):''" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating color='dark'>E-mail</ion-label>
+      <ion-input type="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="registrationModel.email" #Email="ngModel" name="Email"
+        required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating color='dark'>GST Number</ion-label>
+      <ion-input type="number" [(ngModel)]="registrationModel.gstNumber" #GstNumber="ngModel" name="GstNumber"
+        ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating color='dark'>PAN Number</ion-label>
+      <ion-input type="text" [(ngModel)]="registrationModel.panNumber" #PanNumber="ngModel" name="PanNumber"
+        ></ion-input>
+    </ion-item>
+
+    <ion-list style="margin-top: 8%">
+      <ion-item>
+        <ion-label>Wholesaler</ion-label>
+        <ion-select #Wholesaler (ionChange)="switchWholesaler(registrationModel.wholesaler)"
+          (click)="$event.stopPropagation();_alert.setElement(WholesalerSelect,true)"
+          [(ngModel)]="registrationModel.wholesaler" #Wholesaler="ngModel" name="Wholesaler" cancelText="Cancel"
+          okText="Ok" required>
+          <ion-option value="{{wholesalers._id}}" *ngFor="let wholesalers of allWholesalers">{{wholesalers.name}}
+          </ion-option>
+
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+
+    <ion-list style="margin-top: 8%">
+      <ion-item>
+        <ion-label> Select language</ion-label>
+        <ion-select #Language (ionChange)='switchlang(registrationModel.languange)'
+          (click)="$event.stopPropagation();_alert.setElement(LanguageSelect,true)"
+          [(ngModel)]="registrationModel.languange" #Selectlanguage="ngModel" name="Selectlanguage" cancelText="Cancel"
+          okText="Ok">
+          <ion-option value="{{lang._id}}" *ngFor="let lang of allLanguages">{{lang.name}}</ion-option>
+
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-item>
+
+      <ion-label class="keepMe">Terms & conditions
+      </ion-label>
+      <ion-checkbox class="checkBox" [(ngModel)]="registrationModel.termsAndConditions" name="terms" #terms="ngModel"
+        required>
+      </ion-checkbox>
+    </ion-item>
+
+    </ion-list>
+  </form>
+</ion-content>
+<ion-footer no-border>
+  <button ion-button full text-uppercase class="footer-button" [disabled]="registration.invalid"
+    (click)='registrationData()'>SUBMIT</button>
+</ion-footer>

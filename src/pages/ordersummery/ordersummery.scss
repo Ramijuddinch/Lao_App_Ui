@@ -1,0 +1,127 @@
+page-ordersummery {
+    .content{
+        background-color:lightgray;
+        // padding-bottom: 0px;
+    }
+    .bill-header{
+        text-align: center;
+        padding:0px;
+        margin: 0px;
+    }
+    .wholesaler-add{
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+    }
+    .wholesaler-mail{
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+    }
+    .wholesaler-phone{
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+    }
+    .bill-no{
+        text-align: left;
+        padding: 0px;
+        margin: 0px;
+    }
+    .wholesaler-gst{
+        text-align: right;
+        padding: 0px;
+        margin: 0px;
+    }
+    // .order-date{
+    //     text-align: left;
+    //     padding: 0px;
+    //     margin: 0px;
+    // }
+    .order-time{
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+    }
+    .tableheading{
+    background-color: yellow;
+    margin-top: 10px;
+    }
+    .slno{
+        text-align: left;
+    }
+    .desciption{
+        text-align: center;
+    }
+    .quantity{
+        text-align: center;
+    }
+    .price{
+        text-align: center;
+    }
+    .amount{
+        text-align: right;
+    }
+    .desciptionitem{
+        text-align: left;
+    }
+    .offeraply{
+        text-align: left;
+        margin-left: 0px;
+    }
+   
+    ion-input{
+        background-color: white;
+        padding: 0px;
+        margin: 0px;
+        border-radius: 15px;
+    }
+    .offercancel{
+        text-align: center;
+        padding-top:20px ;
+    }
+    // .ioncolofferamount{
+    //     margin-top: 10px;
+    // }
+
+    .appyornot{
+        background-color: white;
+        text-align: left;
+        padding: 10px;
+        margin-top: 30px;
+        // box-sizing: content-box;
+        border-radius: 25px;
+    }
+    .offeramount{
+        text-align: left;
+        margin-right: 20px;
+    }
+    .tablefooter{
+        background-color: yellow;
+    }
+    .deliveryadd{
+        margin-top: 10px;
+    }
+  
+    .checkbox{
+        background-color:lightgray;
+    }
+//    .keepMe{
+//         // margin-top: 5px;
+//         // margin-bottom: 5px;
+//         // color: #888;
+//         // padding-left: -25px;
+//         margin-left: 35px;
+//         // width: 150px;
+//     }
+//     .checkBox{
+//         margin-bottom: 75px;
+//         // position: static;
+//         // display: block;
+//         // margin: 9px 10px 9px 4px;
+//         // background-color: transparent;
+//     }
+    // .footer{
+    //     margin-top: 0px;
+    // }
+}

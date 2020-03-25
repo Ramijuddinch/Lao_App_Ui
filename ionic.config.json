@@ -1,0 +1,7 @@
+{
+  "name": "LAO",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,54 @@
+<ion-content>
+
+  <!-- before adding validation -->
+  <!-- <ion-row>
+        <ion-col col-12>
+            <img class="logo" src='../../assets/imgs/icon.png'>
+        </ion-col>
+      </ion-row>
+      <ion-row class="p-l-4">
+          <ion-col col-12 class="col-static">
+            <ion-input class="input-cover" type="tel" pattern="[5-9]{1}[0-9]{9}"  minlength="10" maxlength="10" [(ngModel)]="Username"  placeholder="Username / Mobile No"   required></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row class="p-l-4">
+            <ion-col col-12 class="col-static">
+                <ion-input class="input-cover" type="password" [(ngModel)]="password"  placeholder="Password"  required></ion-input>
+            </ion-col>
+          </ion-row> -->
+
+  <!-- After adding validation - Mythreyi -->
+
+  <form #signup="ngForm">
+    <ion-row>
+      <ion-col col-12>
+        <img class="logo" src='assets/imgs/icon.png'>
+      </ion-col>
+    </ion-row>
+    <ion-row class="p-l-4">
+      <ion-col col-12 class="col-static">
+        <ion-input class="input-cover" type="tel" name="mobile" #mobile="ngModel" npattern="[5-9]{1}[0-9]{9}"
+          minlength="10" maxlength="10" [(ngModel)]="Username" placeholder="Username / Mobile No" required></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row class="p-l-4">
+      <ion-col col-12 class="col-static">
+        <ion-input class="input-cover" type="password" name="Pssword" #Pssword="ngModel" [(ngModel)]="password"
+          placeholder="Password" required>
+        </ion-input>
+      </ion-col>
+    </ion-row>
+  </form>
+  <br>
+  <br>
+  <br>
+  <button ion-button full clear text-uppercase (click)="gotoRegister()">Don't have account ? Register now</button>
+  <!-- <ion-row style="margin-top: 20%">
+            <ion-col >
+              <button ion-button round class="button" (click)="login()" >Submit</button>
+            </ion-col>
+            </ion-row> -->
+</ion-content>
+<ion-footer no-border>
+  <button ion-button full text-uppercase class="button" [disabled]="signup.invalid" (click)="login()">Submit</button>
+</ion-footer>

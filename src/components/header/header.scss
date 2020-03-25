@@ -1,0 +1,64 @@
+header {
+    .dot {
+        height: 9px;
+        width: 9px;
+        background-color:#ed1c24;
+        border-radius: 50%;
+        position: absolute;
+        margin: -6px;
+    }
+      .bgimgmenuwidth button {
+          width: 50px !important;
+          background-color: transparent;
+        }
+        .bgimgmenu {
+          width: 40px !important;
+        }
+        .bagIcon {
+          height: 52%;
+        }
+        .searchIcon {
+          height: 55%;
+        }
+        .notificationIcon {
+          height: 100%;
+        }
+        .moreIcon {
+          height: 50%;
+        }
+      
+        .dot {
+          height: 9px;
+          width: 9px;
+          background-color: #ed1c24;
+          border-radius: 50%;
+          position: absolute;
+          margin: -6px;
+        }
+      
+        .cart-badge {
+          position: absolute;
+          top: 1px;
+          right: 0px;
+          font-size: 11px;
+          width: 5%;
+          text-align: center !important;
+          margin-right: 35%;
+          border-radius: 50%;
+          background-color: #ed1c24 !important;
+        }
+        ion-badge {
+          padding: 2px 0px 0px 1px;
+          text-align: center;
+          display: inline-block;
+          min-width: 15px;
+          font-size: 1.3rem;
+          font-weight: bold;
+          line-height: 1;
+          white-space: nowrap;
+          vertical-align: baseline;
+        }
+        ion-navbar[hidebackbutton] button[menutoggle] {
+          display: block !important;
+        }
+}

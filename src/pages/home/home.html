@@ -1,0 +1,110 @@
+<!-- 
+<ion-header  no-border>
+  <ion-navbar>
+          <ion-buttons left icon-only class="bgimgmenuwidth">
+              <button icon-only menuToggle class="bgimgmenuwidth" (click)="onOpenMenu()">
+                  <img class="bgimgmenu" src="assets/icon/menu.svg" alt="">
+              </button>
+            
+          </ion-buttons>
+          <ion-title > <img class="logo" src="../../assets/imgs/icon.png" /> </ion-title>
+          <ion-buttons right>
+              <button  ion-button icon-only (click)="cart()">
+                      <ion-icon class="cartIcon" name="cart"></ion-icon>
+              </button>
+              <button class="cartIcon"  ion-button icon-only (click)="OpenNotification()">
+                  <ion-icon name="notifications"></ion-icon>
+              </button>
+            </ion-buttons>
+  </ion-navbar>
+
+<ion-searchbar [(ngModel)]="searchItem" animated="true" (ionInput)="setFilteredCategory($event)" placeholder="Search"
+autocorrect="on" spellcheck="true">
+<ion-icon name="close"></ion-icon>
+</ion-searchbar>
+</ion-header> -->
+<header [withlogo]=true></header>
+<ion-content>
+  <!-- <ion-row >
+        <div class="autocomplete">
+          <ion-searchbar [(ngModel)]="searchText" (ionInput)="retailerNameFilter()" autocorrect="on" spellcheck="true"
+            animated="true" showCancelButton="true" placeholder="Select wholeseller" >
+            <ion-icon (click)="clear()" name="close"></ion-icon>
+          </ion-searchbar>
+          <ion-list >
+          </ion-list>
+        </div>
+      </ion-row> -->
+
+  <ion-card class="StoreCard">
+    <ion-item style="background-color:#b7cc92">
+      <ion-row *ngIf = "selectWholesaler">
+        <ion-col col-3 >
+          <!-- <ion-avatar item-start class="stor"> -->
+            <span>
+              <img class="storeImg" src="" onerror="this.onerror=null;this.src='assets/imgs/store.png'" />
+            </span>
+          <!-- </ion-avatar> -->
+        </ion-col>
+        <ion-col>
+          <span>
+            <h2 text-wrap class="HText">{{selectWholesaler.name}} </h2>
+            <!-- <h2 text-wrap class="HText"> Nungambakkam</h2> -->
+          </span>
+        </ion-col>
+      </ion-row>
+      <!-- <ion-row>
+        <ion-col><span class="ClearBtn" (click)="closeButon()">
+            <ion-icon name="close"></ion-icon>
+          </span></ion-col>
+      </ion-row> -->
+    </ion-item>
+  </ion-card>
+
+  <h3>Top Wholeseller</h3>
+  <ion-row>
+    <ion-slides loop="true" autoplay="true" class="smallImges" slidesPerView="3">
+      <ion-slide style="padding:2px" *ngFor="let wholeseller of  allWholesalers"   >
+        <span (click)="selectSW(wholeseller)">
+        <img class="store" src="assets/imgs/store.png" />
+        <span style="font-size:14px;white-space: nowrap;">{{wholeseller.name}}</span>
+      </span>
+      </ion-slide>
+      <!-- <ion-slide style="padding:2px">
+        <img class="store" src="assets/imgs/store.png" />
+        <span>My Store 2</span>
+      </ion-slide>
+      <ion-slide style="padding:2px">
+        <img class="store" src="assets/imgs/store.png" />
+        <span>My Store 3</span>
+      </ion-slide> -->
+    </ion-slides>
+  </ion-row>
+
+  <h3>All Categories</h3>
+  <ion-row style="margin-top: 0px" *ngFor="let cat of catList" >
+    
+    <ion-col>
+      <button class="cusbutton">{{cat._id}}</button>
+    </ion-col>
+    <ion-grid>
+        <ion-row >
+          <ion-col col-6 *ngFor="let subcat of cat.categories" (click)="subcategoryPage(subcat)">
+              <img class="cate" src="{{subcat.image}}" />
+              <p text-center style="font-weight: 500;">{{subcat.name}}</p>
+          </ion-col>
+        </ion-row>
+        </ion-grid>
+    <!-- <ion-slides loop="true" slidesPerView="1" class="smallImges"   >
+        <span  *ngFor="let subcat of cat.categories">
+      <ion-slide style="padding:3px"  (click)="subcategoryPage(subcat)">
+       
+        <img class="cate" src="assets/imgs/rice.jpg" />
+        <span style="font-weight: 500;">{{subcat.name}}</span>
+      </span>
+      </ion-slide>
+
+    </ion-slides> -->
+  </ion-row>
+
+</ion-content>

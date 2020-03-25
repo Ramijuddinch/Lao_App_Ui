@@ -1,0 +1,42 @@
+<ion-header no-border *ngIf='withlogo; else WithBack'>
+    <ion-navbar hideBackButton>
+        <ion-buttons left icon-only class="bgimgmenuwidth">
+            <button icon-only menuToggle class="bgimgmenuwidth" (click)="onOpenMenu()">
+                <img class="bgimgmenu" src="assets/icon/menu.svg" alt="">
+            </button>
+          
+        </ion-buttons>
+        <ion-title > <img class="logo" src="assets/imgs/icon.png" /> </ion-title>
+        <ion-buttons right>
+            <button  ion-button icon-only (click)="cart()">
+                    <ion-icon class="cartIcon" name="cart"></ion-icon>
+                    <ion-badge class="cart-badge" *ngIf="productLength != 0">{{productLength}}</ion-badge>
+                    <ion-badge class="cart-badge" *ngIf="productLength == 0"></ion-badge>
+            </button>
+            <button class="cartIcon"  ion-button icon-only (click)="OpenNotification()">
+                <ion-icon name="notifications"></ion-icon>
+            </button>
+          </ion-buttons>
+</ion-navbar>
+
+      <!-- <ion-searchbar [(ngModel)]="searchItem" animated="true" (click)="setFilteredCategory()" placeholder="Search"
+      autocorrect="on" spellcheck="true">
+      <ion-icon name="close"></ion-icon>
+      </ion-searchbar> -->
+</ion-header>
+
+<ng-template #WithBack>
+    <ion-header no-border >
+        <ion-navbar>
+            <ion-title>{{titleHeader}}</ion-title>
+            <ion-buttons right *ngIf="showLogo">
+                <button  ion-button icon-only (click)="cart()">
+                        <ion-icon style="color: #fff" name="cart"></ion-icon>
+                        <ion-badge class="cart-badge" *ngIf="productLength != 0">{{productLength}}</ion-badge>
+                        <ion-badge class="cart-badge" *ngIf="productLength == 0"></ion-badge>
+                </button>
+              </ion-buttons>
+          </ion-navbar>
+    </ion-header>
+</ng-template>
+

@@ -1,0 +1,80 @@
+page-mycart {
+    .text-black {
+        text-align: center;
+        margin-left: 0px;
+      }
+      .cart {
+        margin-top: 17%;
+        border-bottom: 1px solid !important;
+        border-bottom-color: #b1afaf !important;
+      }
+      .cardImage {
+        height: 100px;  
+      }
+      .title{
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .price{
+          color: red;
+          font-size: 14px;
+          font-weight: 500;
+      }
+      .gstText {
+        font-size: 13px !important;
+        
+    }
+    .qtyInput{
+      margin-top: 8px;
+      border: 1px solid;
+        height: 35px;
+        border-color: #053f0f;
+    }
+    
+    .text-input-md {
+      margin: 8px 8px;
+      padding: 0;
+      width: calc(100% - 8px - 8px);
+    }
+    .deleteIcon{
+        margin-top: 0px !important;
+        width: 19px !important;
+        margin-left: 27px;
+    }
+
+    .grandTotal{
+        font-size: 17px !important;
+         font-weight: 600 !important;
+         float: right;
+         color: #ed1c24; 
+         white-space: nowrap;
+    
+        }
+        .grand{
+            color: #ed1c24;
+            font-size: 17px !important;
+            font-weight: 600 !important;
+            float: right;
+        }   
+        .warning{
+            margin-left: 13px;
+        }
+        .card-content-md {
+          padding: 5px 0px;
+          font-size: 1.4rem;
+          line-height: 1.5;
+      }
+      .scroll-content {
+        bottom: 0% !important;
+        top: 10%;
+    }
+    .emptyCart {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      vertical-align: middle;
+    }
+    .emptyCartCol {
+      text-align: center;
+    }
+}

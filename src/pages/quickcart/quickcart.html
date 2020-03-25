@@ -1,0 +1,67 @@
+
+<ion-header>
+  <ion-navbar>
+      <ion-buttons left icon-only class="bgimgmenuwidth">
+          <button icon-only menuToggle class="bgimgmenuwidth" (click)="onOpenMenu()">
+              <img class="bgimgmenu" src="assets/icon/menu.svg" alt="">
+          </button>
+        </ion-buttons>
+    <ion-title>Quick cart</ion-title>
+    <ion-buttons right>
+        <button  ion-button icon-only (click)="cart()">
+            <ion-icon style="color: #fff" name="cart"></ion-icon>
+            <ion-badge class="cart-badge" *ngIf="productLength != 0">{{productLength}}</ion-badge>
+            <ion-badge class="cart-badge" *ngIf="productLength == 0"></ion-badge>
+    </button>
+
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <!-- <ion-searchbar [(ngModel)]="searchItem" animated="true"  placeholder="Search wholeseller"
+    autocorrect="on" spellcheck="true"  (ionInput)="setFilteredCategory($event)" >
+    <ion-icon name="close"></ion-icon>
+    </ion-searchbar> -->
+    <ion-searchbar  [(ngModel)]="searchItem"  showCancelButton="true" animated="true"
+    (ionInput)="setFilteredCategory($event)" placeholder="{{'Search products'}}" autocorrect="on"
+    spellcheck="true">
+    <ion-icon name="close"></ion-icon>
+  </ion-searchbar>
+
+
+    <ion-list class="cart">
+      <span  *ngFor="let searchFilterItem of searchList ;let i =index">
+        <ion-row>
+          <ion-col col-4   >
+              <img class="cardImage" src="{{searchFilterItem.image}}" onerror="this.onerror=null;this.src='assets/imgs/icon.png'" />
+          </ion-col >
+          <ion-col col-6>
+            <span class="title">{{searchFilterItem.name}}</span>
+            <p class="sku">SKU ID :{{searchFilterItem.sku}}</p>
+            <p class="sku">GST : {{searchFilterItem.gst * 100}}%</p>
+            <p class="sku">Size : {{searchFilterItem.size}}</p>
+            <p class="price"> {{ searchFilterItem.price | currency: "INR" }}</p>
+            <strong class="price" *ngIf='searchFilterItem.quantity >= 1 '>Total: ₹ {{ searchFilterItem.quantity * searchFilterItem.price | number:'1.2-5'}}</strong>
+            </ion-col>
+            <ion-col col-2>
+                    <ion-input class="qtyInput" type="tel" placeholder="Qty" [(ngModel)]="searchFilterItem.quantity" #qty="ngModel" name="qty" minlength="1" maxlength="3"
+                    oninput="this.value?this.value=this.value.replace(/(?![0-9])./gmi,''):''" >{{searchFilterItem.quantity}}</ion-input>
+             </ion-col>
+        </ion-row>
+     
+        <ion-row>
+          <ion-col col-6>
+              <button ion-button  class="cartButton" clear (click)="viewDetails(searchFilterItem)"><ion-icon class="smIcon" ios="ios-eye" md="md-eye"></ion-icon>View details</button>
+          </ion-col>
+          <ion-col col-6>
+              <button ion-button  class="cartButton" clear (click)="addtocart(searchFilterItem,searchFilterItem.quantity)"><ion-icon class="smIcon"  md="md-add"></ion-icon>Add to cart</button>
+            </ion-col>
+        </ion-row>
+      </span>
+        </ion-list>
+        <p class="noprod" *ngIf=" !isLoaded == true"> <ion-icon ios="ios-alert" md="md-alert"></ion-icon>No product found</p>
+        <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+          <ion-infinite-scroll-content loadingText="Loading more..."></ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+</ion-content>

@@ -1,0 +1,131 @@
+page-home {
+  .notificationIcon {
+    width: 22px;
+  }
+
+  .StoreCard {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 1px solid #ccc;
+    margin: 0px;
+    border-radius: 0px;
+    color: #fff !important;
+    width: 100%;
+    height: 74px;
+    margin-top: 32%;
+    background-color: #053f0f !important;
+  }
+
+  .header {
+    background-color: #053f0f;
+    height: 117px;
+  }
+  .menu-content button {
+    color: #053f0f !important;
+  }
+  .storeImg {
+    border: 2px solid;
+    border-radius: 50%;
+    border-color: #fff;
+    width: 50px;
+    height: 50px;
+    padding: 2px;
+    margin-top: -4px;
+  }
+  .ClearBtn {
+    float: right;
+    color: #fff !important;
+    border-radius: 10px;
+    position: absolute !important;
+    bottom: 36px;
+    font-size: 20px;
+    font-weight: bold;
+    right: 1px;
+  }
+
+  .autocomplete {
+    width: 100%;
+
+    ion-searchbar {
+      padding: 1px !important;
+    }
+  }
+
+  .HText {
+    color: #000;
+    font-size: 14px;
+  }
+
+  .leftbtnText {
+    line-height: 22px !important;
+  }
+  .leftButnBack {
+    background-color: transparent !important;
+    width: 38px;
+    height: 23px;
+  }
+  .menu-content .toolbar-background {
+    background-color: #fff !important;
+  }
+
+  img.logo {
+    display: block;
+    height: 44px;
+    background-color: #fff;
+    margin-left: 83px;
+  }
+  .searchbar-md {
+    background: inherit;
+    padding: 8px;
+  }
+  h3 {
+    color: #d8d0d0;
+    font-size: 14px;
+    margin-left: 3px;
+    position: relative;
+    width: 87%;
+  }
+
+  h3:after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: #d8d0d0;
+    width: 87%;
+    margin-left: 15px;
+    top: 50%;
+  }
+  .smallImges {
+    width: 100%;
+  }
+  .silder {
+    width: 100%;
+  }
+  .store {
+    height: 88px;
+  }
+
+  .cate {
+    width: 95%;
+    height: 100px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+  }
+  .subcatText {
+    margin-left: 3px;
+    font-size: 19px;
+    font-weight: 500;
+    background-color: darkolivegreen;
+  }
+  .cusbutton {
+    background-color: #99b766b5;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+    height: 40px;
+    color: #000;
+    border-radius: 7px;
+  }
+}

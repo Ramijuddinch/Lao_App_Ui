@@ -1,0 +1,90 @@
+page-quickcart {
+    .bgimgmenuwidth button {
+        width: 50px !important;
+        background-color: transparent;
+      }
+      .bgimgmenu {
+        width: 40px !important;
+      }
+
+      .text-black {
+        text-align: center;
+        margin-left: 0px;
+      }
+      .cart {
+        margin-top: 3%;
+        border-bottom: 1px solid !important;
+        border-bottom-color: #b1afaf !important;
+      }
+      .cardImage {
+        height: 100px;  
+      }
+      .title{
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .price{
+          color: red;
+          font-size: 14px;
+          font-weight: 500;
+      }
+
+      .qtyInput{
+        margin-top: 22px;
+        border: 1px solid;
+          height: 35px;
+          border-color: #053f0f;
+      }
+      
+      .text-input-md {
+        margin: 8px 8px;
+        padding: 0;
+        width: calc(100% - 8px - 8px);
+      }
+      .smIcon {
+        margin-right: 6px;
+        font-weight: 700;
+      }
+
+      .noprod{
+        text-align: center;
+        margin-top: 40%;
+        font-size: 20px;
+        font-weight: 500;
+        color: darkgrey
+      }
+      .dot {
+        height: 9px;
+        width: 9px;
+        background-color: #ed1c24;
+        border-radius: 50%;
+        position: absolute;
+        margin: -6px;
+      }
+    
+      .cart-badge {
+        position: absolute;
+        top: 1px;
+        right: 0px;
+        font-size: 11px;
+        width: 5%;
+        text-align: center !important;
+        margin-right: 35%;
+        border-radius: 50%;
+        background-color: #ed1c24 !important;
+      }
+      ion-badge {
+        padding: 2px 0px 0px 1px;
+        text-align: center;
+        display: inline-block;
+        min-width: 15px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        line-height: 1;
+        white-space: nowrap;
+        vertical-align: baseline;
+      }
+      ion-navbar[hidebackbutton] button[menutoggle] {
+        display: block !important;
+      }
+}

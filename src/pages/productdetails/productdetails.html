@@ -1,0 +1,49 @@
+
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>Toor daal 1kg</ion-title>
+    <ion-buttons right>
+        <button  ion-button icon-only (click)="cart()">
+                <ion-icon style="color: #fff" name="cart"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header> -->
+<header [withlogo]=false [titleHeader]="title"></header>
+<ion-content >
+    <!-- <ion-scroll class="" scrollX="true" style="background-color: transparent;height: 53px;margin-top: 17%;    margin-left: 3%;">
+          <span>
+              <button class="varians" ion-button round>2kg</button> 
+              <button class="varians" ion-button round>5kg</button>
+              <button class="varians" ion-button round>10kg</button>
+              <button class="varians" ion-button round>15kg</button>
+           
+          </span>
+      </ion-scroll> -->
+    <ion-slides pager class="image-slider" loop="true" slidesPerView="1">
+        <ion-slide >
+            <img style="height: 250px;"  src="{{product.image}}" class="thumb-img" onerror="this.onerror=null;this.src='assets/imgs/icon.png'" imageViewer />
+        </ion-slide>
+    </ion-slides>
+    
+    <ion-row>
+      <ion-col col-9>
+        <p class="price"> {{ product.price | currency: "INR" }}</p>
+        <p class="sku">SKU ID : {{ product.sku  }}</p>
+        <p class="sku">GST : {{product.gst * 100}}%</p>
+        <p class="sku">Size : {{product.size}}</p>
+
+      </ion-col>
+      <ion-col col-3>
+          <ion-input class="qtyInput" type="tel" placeholder="Qty"  [(ngModel)]="product.quantity" 
+                   minlength="1" maxlength="3" oninput="this.value?this.value=this.value.replace(/(?![0-9])./gmi,''):''">{{product.quantity}}</ion-input>
+        </ion-col>
+    </ion-row>
+    <h3>Description</h3>
+    <ion-row>
+        <p class="desc" [innerHTML]="product.description">{{product.description}}</p>
+    </ion-row>
+</ion-content>
+<ion-footer no-border>
+        <button ion-button full text-uppercase  class="button"  (click)='addtocart(product,product.quantity)'><ion-icon class="smIcon"  md="md-add"></ion-icon>Add to cart</button>
+  </ion-footer>

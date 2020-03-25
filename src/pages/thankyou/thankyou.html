@@ -1,0 +1,26 @@
+
+
+<ion-content padding>
+<img class="orderimage" src="assets/imgs/order.png">
+<span>
+    <p class="order">Order Id : {{orderid }}</p>
+    <p class="title" >Order Placed Successfully </p>
+</span>
+<ion-list>
+    <!-- <ion-item>
+        <ion-input [(ngModel)]="message" placeholder="Enter message"></ion-input>
+    </ion-item> -->
+    <ion-item>
+        <ion-input [(ngModel)]="file" placeholder="Enter file"></ion-input>
+    </ion-item>
+    <!-- <ion-item>
+        <ion-input [(ngModel)]="link" placeholder="Enter link"></ion-input>
+    </ion-item> -->
+</ion-list>
+<button ion-button full text-uppercase  class="footer-button" (click)='share()'>share</button>
+
+</ion-content>
+
+<ion-footer no-border>
+    <button ion-button full text-uppercase  class="footer-button" (click)='gotohome()'>Go to home</button>
+</ion-footer>

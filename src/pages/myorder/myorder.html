@@ -1,0 +1,44 @@
+
+<ion-header>
+  <ion-navbar>
+      <ion-buttons left icon-only class="bgimgmenuwidth">
+          <button icon-only menuToggle class="bgimgmenuwidth" (click)="onOpenMenu()">
+              <img class="bgimgmenu" src="assets/icon/menu.svg" alt="">
+          </button>
+        
+      </ion-buttons>
+    <ion-title>My Order</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list  >
+    <ion-item *ngFor="let allOrders of allOrder">
+      <ion-grid >
+        <ion-row>
+          <ion-col>
+              <p class="orderid">Order id #{{allOrders.laoOrderId}} </p>
+              <!-- <p class="name1">Order Status : {{allOrders.status.message}}</p> -->
+              <p class="name1">Outlet name : {{allOrders.outletName}}</p>
+              <p class="name2">Address : {{allOrders.shopAddress}}</p>
+              <p class="name2">Mobile : {{allOrders.retailerMobile}}</p>
+              <p class="name2">Pincode :{{allOrders.zipcode}}</p>
+              <p class="">Total Items: {{allOrders.products.length}}</p><br>
+              <p class="" >Order Value: 
+                <span class="red"> ₹ {{allOrders.orderValue  | number:'1.2-5' }}</span> </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <span class="addCartListButton">
+            <button ion-button class="button btn-round BtnClass" (click)="viewDetails(allOrders)" text-right>View details
+            </button>
+          </span>
+        </ion-col>
+      </ion-row>
+     
+  </ion-item>
+  <!-- <p class="noprod" *ngIf="!allOrder.length > 0"> <ion-icon ios="ios-alert" md="md-alert"></ion-icon>{{'No Orders Found'}}</p> -->
+  </ion-list>
+</ion-content>

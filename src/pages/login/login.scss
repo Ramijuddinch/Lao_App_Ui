@@ -1,0 +1,43 @@
+page-login {
+.logo{
+    display: block;
+    margin-top: 11%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+// ion-input {
+//     border: 5px !important;
+//   }
+  
+//   .text-input-ios, .text-input-md {
+//       border-radius: 5px;
+//       border: 1px solid #053f0f;
+//   }
+  
+//   .text-input {
+//     margin-left: 5%;
+//     margin-right:  0%;;
+//       width: calc(100% - 10%);
+//       padding: 13px 8px;
+//   }
+
+//   .p-l-4{
+//     margin-top: 14%;
+//   }
+
+  .logotext{
+    text-align: center;
+    font-weight: bold;
+    color: #b1a9a9;
+  }
+  .warning {
+    color: #ED1C24;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 18px;
+    // margin-top: 49px;
+}
+}

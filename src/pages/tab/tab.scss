@@ -1,0 +1,62 @@
+page-tab {
+
+.tab-button-text{
+    color: #999;
+}
+    .tabs-md .tabbar {
+        background: #053f0f;
+    }
+    .tab-button[aria-selected="true"] .tab-button-text{
+        font-size:9px !important;
+        color:white;
+    }
+    ion-icon {
+        &[class*="custom-"] {
+           
+    
+    width: 1em;
+    height: 1em;
+        } // custom icons
+        &[class*="custom-shared"][ng-reflect-is-active="false"] {
+            background:  url("../assets/imgs/trolley star.svg") no-repeat 50% 50%;
+          
+        }//in case of active
+        &[class*="custom-shared"][ng-reflect-is-active="true"] {
+            background:  url("../assets/imgs/trolley star_active.svg") no-repeat 50% 50%;
+            color: red !important;
+        }//in case of active
+        &[class*="custom-seller"][ng-reflect-is-active="false"] {
+            background: url("../assets/icon/seller.svg") no-repeat 50% 50%;
+            background-size: contain;
+        }
+        &[class*="custom-seller"][ng-reflect-is-active="true"] {
+            background: url("../assets/icon/seller.svg") no-repeat 50% 50%;
+            background-size: contain;
+        }//in case of inactive
+        //in case of inactive
+        &[class*="custom-OrderCart"][ng-reflect-is-active="false"]  {
+            background: url("../assets/imgs/package.svg") no-repeat 50% 50%;
+            background-size: contain;
+        }
+        &[class*="custom-OrderCart"][ng-reflect-is-active="true"]  {
+            background: url("../assets/imgs/package_active.svg") no-repeat 50% 50%;
+            background-size: contain;
+        }
+        &[class*="custom-home"][ng-reflect-is-active="false"]  {
+            background: url("../assets/icon/homeTab.svg") no-repeat 50% 50%;
+            background-size: contain;
+        }
+        &[class*="custom-home"][ng-reflect-is-active="true"]  {
+            background: url("../assets/icon/homeTab.svg") no-repeat 50% 50%;
+            background-size: contain;
+        }
+        &[class*="custom-OfferHistory"][ng-reflect-is-active="false"]  {
+            background: url("../assets/icon/offer.svg") no-repeat 50% 50%;
+            background-size: contain;
+        }
+        &[class*="custom-OfferHistory"][ng-reflect-is-active="true"]  {
+            background: url("../assets/icon/offer.svg") no-repeat 50% 50%;
+            background-size: contain;
+        }
+    }
+}

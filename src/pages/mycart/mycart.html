@@ -1,0 +1,56 @@
+<header [withlogo]=false [titleHeader]="'My Cart'"></header>
+<ion-content>
+  <ion-card style="margin-top: 0%;"  *ngFor = "let cart of global.viewcart">
+    <!-- <ion-card-content> -->
+      <ion-row >
+        <ion-col col-4>
+          <img class="cardImage" src="{{cart.image}}" onerror="this.onerror=null;this.src='assets/imgs/icon.png'" />
+        </ion-col>
+        <ion-col col-6>
+          <span class="title">{{cart.name}}</span>
+          <p class="title">SKU ID :{{cart.sku}}</p>
+          <!-- <p class="sku">GST : {{cart.gst * 100}}%</p>
+          <p class="sku">Size : {{cart.size}}</p> -->
+          <p class="price"> {{ cart.price | currency: "INR" }}</p>
+          <p class="price"> Total :{{ cart.totalPrice }}</p>
+        </ion-col>
+        <ion-col>
+          <span class="icon text-light" (click)="removecart(cart)">
+            <img class="deleteIcon" src="assets/icon/Delete.svg" />
+          </span>
+          <ion-input class="qtyInput" type="tel" placeholder="Qty" [(ngModel)]="cart.qty" minlength="1" maxlength="3" (change)="getqty(cart)"
+            oninput="this.value?this.value=this.value.replace(/(?![0-9])./gmi,''):''">{{cart.qty}}</ion-input>
+        </ion-col>
+
+      </ion-row>
+    <!-- </ion-card-content> -->
+  </ion-card>
+
+  <ion-row  *ngIf="isProduct != false">
+    <ion-col col-6>
+      <span class="grandTotal">
+        Grand total
+      </span>
+    </ion-col>
+    <ion-col col-6>
+      <span class="grand">
+         ₹{{  total | number:'1.2-2'}}
+      </span>
+    </ion-col>
+    <br><br>
+    <br><br>
+  </ion-row>
+  <br><br>
+  <ion-grid padding *ngIf="isProduct == false" class="emptyCartCol">
+      <ion-row>
+        <ion-col>
+          <img src="assets/imgs/empty_cart.png" class="emptyCart"></ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>
+
+<!-- <ion-footer *ngIf = "isProduct != false"> -->
+  <ion-footer *ngIf = "isProduct == true">
+
+  <button ion-button full class="Button" (click)="proceedCheckout()">Proceed to Order</button>
+</ion-footer>

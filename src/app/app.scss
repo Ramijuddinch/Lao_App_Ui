@@ -1,0 +1,138 @@
+.button{
+    height: 50px;
+    width: 100%;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    border-radius: 2%;
+    font-weight: 400;
+    background: primary;
+ 
+}
+
+.smallbutton{
+    height: 50px;
+    width: 94%;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    border-radius: 2%;
+    font-weight: 400;
+    margin-left: 3%;
+    background: primary;
+    
+}
+.footer-button{
+    height: 60px;
+    width: 100%;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    border-radius: 2%;
+    font-weight: 400;
+    background: primary;  
+}
+
+.toolbar-background-md {
+    border-color: #053f0f;
+    background: #053f0f;
+   
+}
+
+.toolbar-title-md {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.profile-details ion-label.label.label-md {
+    margin-top: 13px;
+  }
+  .profile-details .item-inner{
+    border-bottom: unset !important;
+  }
+  .profile-details {
+    background-position: initial;
+    background-color: #053f0f;
+    height: 117px;
+  }
+
+  .profile-img-rs img{
+    height: 77px !important;
+    width: 77px;
+    margin-left: -5px;
+    border-radius: 50%;
+  }
+  ion-thumbnail.profile-img-rs {
+    margin-top: 23px !important;
+    margin-left: 10px !important;
+    min-width: 55px;
+    border-radius: 50%;
+  }
+  .usernamee{
+    text-transform: capitalize;
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    font-weight: normal;
+    line-height: normal;
+    color: #fff;
+  }
+
+  .cartButton{
+    border: 1px solid;
+    border-radius: 50px;
+    width: calc(100% - 8px - 8px);
+    height: 42px;
+    font-weight: 500;
+
+  }
+
+  .loading-md .loading-wrapper {
+    -webkit-box-shadow: 0;
+    box-shadow: 0 0 0 transparent;
+    background: transparent;
+  }
+  .loading-ios .loading-wrapper {
+    background: none;
+  }
+  .spinner {
+    height: 80px;
+    width: 80px;
+  }
+  .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    color: #fff;
+    background-color: transparent;
+}
+.menuText{
+  margin-left: 14px;
+    font-size: 18px;
+}
+.bgimgmenuwidth button {
+  width: 50px !important;
+  background-color: transparent;
+}
+.bgimgmenu {
+  width: 40px !important;
+}
+.warning {
+  color: #ED1C24;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  margin-left: 4px;
+}
+
+.iconImage{
+  width: 23px;
+}
+.item-md ion-avatar img {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 31px;
+  height: 39px;
+}
+ion-avatar[item-start], .item-md ion-thumbnail[item-start] {
+  margin: 8px 0px 8px 0 !important;
+}
+.profile-details ion-label.label.label-md {
+  margin-top: 13px;
+  margin-left: 19px;
+}

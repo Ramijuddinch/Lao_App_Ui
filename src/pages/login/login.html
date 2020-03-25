@@ -1,0 +1,70 @@
+
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content padding>
+    <form #loginForm="ngForm">
+      
+  <ion-row>
+    <ion-col col-12>
+        <img class="logo" src='assets/imgs/icon.png'>
+    </ion-col>
+  </ion-row>
+  <ion-list>
+
+      <ion-item>
+        <ion-label floating>Mobile Number</ion-label>
+        <ion-input  type="tel"  pattern="[5-9]{1}[0-9]{9}" name="mobile" #mobile="ngModel" [(ngModel)]="signInModel.mobileNo"  minlength="10" maxlength="10"   oninput="this.value?this.value=this.value.replace(/(?![0-9])./gmi,''):''" required></ion-input>
+      </ion-item>
+      <div class="warning" *ngIf="mobile.errors?.pattern">*{{'Please enter valid mobile Number number'}}</div>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password"  name="password" #password="ngModel" [(ngModel)]="signInModel.Password" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label floating>Confirm password</ion-label>
+          <ion-input type="password" name="Conpassword" #Conpassword="ngModel" [(ngModel)]="signInModel.conpassword"  required></ion-input>
+        </ion-item>
+    
+    </ion-list>
+  <!-- <ion-row class="">
+      <ion-col class="col-static">
+        <ion-input class="input-cover" type="tel"  pattern="[5-9]{1}[0-9]{9}" name="mobile" #mobile="ngModel" [(ngModel)]="mobileNo"  minlength="10" maxlength="10" placeholder="Mobile Number"  oninput="this.value?this.value=this.value.replace(/(?![0-9])./gmi,''):''" required></ion-input>
+      </ion-col>
+    </ion-row>
+    <div class="warning" *ngIf="mobile.errors?.pattern">*{{'Please enter valid mobile Number number'}}</div>
+    <ion-row class="">
+      <ion-col class="col-static">
+          <ion-input class="input-cover" type="password"  name="password" #password="ngModel" [(ngModel)]="Password"  placeholder="Password"   required></ion-input>
+        </ion-col>
+        </ion-row>
+
+        <ion-row class="">
+            <ion-col class="col-static">
+                <ion-input class="input-cover" type="password"  name="Conpassword" #Conpassword="ngModel" [(ngModel)]="conpassword"  placeholder="Confirm password" required></ion-input>
+              </ion-col>
+              </ion-row> -->
+    <!-- <br><br><br> -->
+    
+ 
+
+    <ion-row style="margin-top: 10%">
+        <ion-col >
+          <button ion-button  class="button" [disabled]="loginForm.invalid" (click)="login(signInModel)" >Login</button>
+        </ion-col>
+        </ion-row>
+</form>
+       
+</ion-content>
+<ion-footer  no-border>
+  <ion-row>
+    <ion-col>
+        <h1 class="logotext"> <img style="height: 20px" src="assets/imgs/icon.png"> LAO</h1>
+    </ion-col>
+  </ion-row>
+  </ion-footer>

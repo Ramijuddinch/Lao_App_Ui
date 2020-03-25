@@ -1,0 +1,26 @@
+page-order-details {
+    .cart {
+        margin-top: 17%;
+        border-bottom: 1px solid !important;
+        border-bottom-color: #b1afaf !important;
+      }
+      .cardImage {
+        height: 100px;  
+      }
+      .title{
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .price{
+          color: red;
+          font-size: 14px;
+          font-weight: 500;
+          white-space: nowrap;  
+      }
+      .scroll-content {
+        bottom: 0% !important;
+        top: 10%;
+    }
+
+
+}

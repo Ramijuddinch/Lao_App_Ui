@@ -1,0 +1,60 @@
+
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>Wholeseller</ion-title>
+  </ion-navbar>
+</ion-header> -->
+<header [withlogo]=false [titleHeader]="'Wholeseller'"></header>
+<ion-content >
+    <ion-searchbar [(ngModel)]="searchItem" animated="true"  placeholder="Search wholeseller"
+    autocorrect="on" spellcheck="true">
+    <ion-icon name="close"></ion-icon>
+    </ion-searchbar>
+    <ion-grid>
+        <ion-row >
+          <ion-col col-6 *ngFor="let wholeseller of  allWholesalers" >
+              <ion-card (click)="selectedWholesaler(wholeseller)">
+                  <img class="img" src="assets/imgs/store.png"/>
+                  <ion-card-content>
+                    <ion-card-title>
+                     {{wholeseller.name}}
+                      </ion-card-title>
+                  </ion-card-content>
+                </ion-card>
+          </ion-col >
+          <!-- <ion-col col-6>
+              <ion-card>
+                  <img class="img" src="assets/imgs/store.png"/>
+                  <ion-card-content>
+                    <ion-card-title>
+                     Ram
+                      </ion-card-title>
+                  </ion-card-content>
+                </ion-card>
+          </ion-col> -->
+        </ion-row>
+        <!-- <ion-row>
+            <ion-col col-6>
+                <ion-card>
+                    <img class="img" src="assets/imgs/store.png"/>
+                    <ion-card-content>
+                      <ion-card-title>
+                       Raj
+                        </ion-card-title>
+                    </ion-card-content>
+                  </ion-card>
+            </ion-col >
+            <ion-col col-6>
+                <ion-card>
+                    <img class="img" src="assets/imgs/store.png"/>
+                    <ion-card-content>
+                      <ion-card-title>
+                       Karthik
+                        </ion-card-title>
+                    </ion-card-content>
+                  </ion-card>
+            </ion-col>
+           
+          </ion-row> -->
+        </ion-grid>
+</ion-content>

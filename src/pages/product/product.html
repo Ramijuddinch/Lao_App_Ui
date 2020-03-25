@@ -1,0 +1,85 @@
+
+
+<header [withlogo]=false [titleHeader]="title"></header>
+
+<ion-content>
+   <!-- sub cat code  -->
+  <!-- <ion-scroll class="scroll" scrollX="true">
+    <ion-item class="catimage">
+      <span >
+        <div text-center>
+          <img class="dash-bg" src="" onerror="this.onerror=null;this.src='../../assets/imgs/daal.jpg'" />
+        </div>
+      </span>
+      <span class="text-black">Toor Dal</span>
+    </ion-item>
+  </ion-scroll> -->
+
+  <!-- <ion-list *ngIf=" !isLoaded == false">
+    <ion-scroll class="varian" scrollX="true">
+      <span>
+        <button class="varians" ion-button round>2kg</button>
+        <button class="varians" ion-button round>5kg</button>
+        <button class="varians" ion-button round>10kg</button>
+        <button class="varians" ion-button round>15kg</button>
+        <button class="varians" ion-button round>20kg</button>
+        <button class="varians" ion-button round>25kg</button>
+      </span>
+    </ion-scroll>
+
+  </ion-list> -->
+
+    <!-- <span > -->
+        <ion-list class="cart" >
+      <span  *ngFor = "let product of lst_Product;">
+    <ion-row >
+      <ion-col col-4>
+        <img class="cardImage" src="{{product.image}}" onerror="this.onerror=null;this.src='assets/imgs/icon.png'" />
+      </ion-col>
+      <ion-col col-6>
+        <span class="title">{{product.name}}</span>
+        <p class="sku">SKU ID :{{product.sku}}</p>
+        <p class="sku">GST : {{product.gst * 100}}%</p>
+        <p class="sku">Size : {{product.size}}</p>
+        <p class="price"> {{ product.price | currency: "INR" }}</p>
+        <strong class="total" *ngIf='product.quantity >= 1 '>Total: ₹ {{ product.quantity * product.price | number:'1.2-5'}}</strong>
+      </ion-col>
+      <ion-col col-2>
+        <ion-input class="qtyInput" type="tel" placeholder="Qty" [(ngModel)]="product.quantity" #qty="ngModel" name="qty" minlength="1" maxlength="3"
+          oninput="this.value?this.value=this.value.replace(/(?![0-9])./gmi,''):''" >{{product.quantity}}</ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row  >
+      <ion-col col-6>
+        <button ion-button class="cartButton" clear (click)="viewDetails(product)">   <ion-icon class="smIcon" ios="ios-eye" md="md-eye"></ion-icon>
+          View details</button>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button class="cartButton" clear   (click)="addtocart(product,product.quantity)"><ion-icon class="smIcon"  md="md-add"></ion-icon>Add to cart</button>
+      </ion-col>
+    </ion-row>
+   
+  <!-- </span> -->
+</span>
+  </ion-list>
+
+<!-- -----------------------------scrolling thing ------------------------------->
+
+   <!-- <p class="noprod" *ngIf=" !isLoaded == true"> <ion-icon ios="ios-alert" md="md-alert"></ion-icon>No product found</p> -->
+
+ <!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingText="Loading more..."></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+    -->
+
+
+
+
+  <!-- <ion-grid padding *ngIf=" !isLoaded == true" class="emptyCartCol">
+      <ion-row>
+        <ion-col>
+          <span class="helper">No Product Found</span>
+          <img src="assets/imgs/empty_cart.png" class="emptyCart"></ion-col> -->
+      <!-- </ion-row>
+    </ion-grid> -->
+</ion-content>
